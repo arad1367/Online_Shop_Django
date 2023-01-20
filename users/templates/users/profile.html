@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+
+<div class="grid p-10 grid-cols-1 lg:grid-cols-3 sm:grid-cols-1">
+    <div class="rounded shadow-lg">
+        <div class="h-40 w-20 rounded-md">
+            <img src="{{user.profile.image.url}}" alt="">
+        </div>
+        <div class="font-bold text-xl mb-2 px-6 py-4">
+            Welcome {{ user.username }}
+        </div>
+        <div class="font-bold text-xl mb-2 px-6 py-4">
+            Contact Number: {{ user.profile.contact_number }}
+        </div>
+        <div class="mb-2 px-6 py-4"">
+            <a type="button" href="{% url 'users:createprofile' %}" class="inline-block px-6 py-2 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">Edit Profile</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
