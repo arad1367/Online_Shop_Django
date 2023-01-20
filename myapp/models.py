@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 
 # Create your models here.
+# This is a product model
 class Products(models.Model): # It's better to define class name not plural
     def __str__(self) -> str:
         return self.name
